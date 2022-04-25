@@ -4,6 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TestMain {
     @Test
     public void testInputIsEven(){
-        assertTrue(Main.sayıKontrol(201)); // Assertion
+        assertTrue(Main.sayıKontrol(2022)); // Assertion
     }
 }
