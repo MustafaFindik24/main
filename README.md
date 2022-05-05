@@ -1,2 +1,2 @@
 # main
-Simple Maven project in Jenkins on Docker
+A simple Maven project in Jenkins on Docker
