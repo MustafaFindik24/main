@@ -3,6 +3,9 @@ pipeline {
     tools{
         maven 'maven-3.5.2'
     }
+    triggers {
+        githubPush()
+      }
     stages {
         stage("build") {
             steps {
