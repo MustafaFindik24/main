@@ -12,7 +12,7 @@ pipeline {
                 echo 'building the application...'
                 sh "mvn install"
                 checkout([$class: 'GitSCM',
-                   branches: [[name: '*/main']],
+                   branches: [[name: '*/dev']],
                    doGenerateSubmoduleConfigurations: false,
                    extensions: [[$class: 'CleanCheckout']],
                    submoduleCfg: [],
