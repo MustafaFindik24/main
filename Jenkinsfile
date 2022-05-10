@@ -11,6 +11,14 @@ pipeline {
             steps {
                 echo 'building the application...'
                 sh "mvn install"
+                checkout([$class: 'GitSCM',
+                   branches: [[name: '*/main']],
+                   doGenerateSubmoduleConfigurations: false,
+                   extensions: [[$class: 'CleanCheckout']],
+                   submoduleCfg: [],
+                   userRemoteConfigs: [[url: 'https://github.com/MustafaFindik24/main.git']]])
+                 sh "ls -ltr"
+
             }
         }
       stage("test") {
